@@ -5,7 +5,7 @@ import java.io.*;
 public class Ejemplo2 {
 	public static void main(String[] args) throws IOException {
 
-		Process p = new ProcessBuilder("CMD", "/C", "DIR").start();
+		Process p = new ProcessBuilder("CMD", "/Css", "DIR").start();
 		try {
 
 			InputStream is = p.getInputStream();
