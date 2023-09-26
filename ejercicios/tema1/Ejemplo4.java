@@ -1,6 +1,7 @@
 package tema1;
 
 import java.io.*;
+import java.util.concurrent.TimeUnit;
 
 public class Ejemplo4 {
 	public static void main(String[] args) throws IOException {
