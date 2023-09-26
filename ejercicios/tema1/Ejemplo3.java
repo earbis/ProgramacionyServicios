@@ -6,10 +6,10 @@ public class Ejemplo3 {
   public static void main(String[] args) throws IOException {
 
 	//creamos objeto File al directorio donde esta Ejemplo2
-	File directorio = new File(".\\bin");	
+	File directorio = new File(".\\bin\\tema1");	
 
 	//El proceso a ejecutar es Ejemplo2			
-	ProcessBuilder pb = new ProcessBuilder("java", "Ejemplo2");
+	ProcessBuilder pb = new ProcessBuilder("java", "Nombres", "Frasncisco");
 
     //se establece el directorio donde se encuentra el ejecutable
     pb.directory(directorio);
@@ -29,6 +29,12 @@ public class Ejemplo3 {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-		
+	int exitVal;
+	try {
+		exitVal = p.waitFor();
+		System.out.println("Valor de Salida: " + exitVal);
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	}
   }
 }// Ejemplo3
